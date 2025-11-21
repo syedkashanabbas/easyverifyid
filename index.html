@@ -521,13 +521,39 @@
       <!-- Item 1 -->
       <div class="flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 bg-gray-50">
         <p class="font-medium text-sm">1) Group A</p>
-        <a href="#" class="text-blue-600 text-xs font-medium hover:underline">Click here to see accepted documents</a>
+      <a href="#" class="text-blue-600 text-xs font-medium hover:underline"
+              onclick="openDocumentsModal(groupAHTML); return false;">
+              Click here to see accepted documents
+            </a>
+
       </div>
+
+      <!-- DOCUMENT LIST MODAL -->
+       <center>
+<div id="documentsModal" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50">
+  <div class="doc-modal-box bg-white w-full max-w-3xl rounded-lg shadow-xl 
+              overflow-y-auto max-h-[90vh] p-8 relative transform transition-all duration-300 scale-95 opacity-0">
+
+    <!-- CLOSE BUTTON -->
+    <button onclick="closeDocumentsModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+      &times;
+    </button>
+
+    <div id="documentsModalContent"></div>
+
+  </div>
+</div>
+</center>
 
       <!-- Item 2 -->
       <div class="flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 bg-gray-50">
         <p class="font-medium text-sm">2) Group B</p>
-        <a href="#" class="text-blue-600 text-xs font-medium hover:underline">Click here to see accepted documents</a>
+        <a href="#" 
+   onclick="openDocumentsModal(groupBHTML); return false;" 
+   class="text-blue-600 text-xs font-medium hover:underline">
+   Click here to see accepted documents
+</a>
+
       </div>
 
 
@@ -764,5 +790,6 @@ document.getElementById("orderModal").addEventListener("click", function(e) {
 </script>
 
 <script src="./assets/js/faqs.js"></script>
+<script src="./assets/js/modal.js"></script>
 </body>
 </html>
