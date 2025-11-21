@@ -123,7 +123,7 @@
         <div class="flex items-start gap-2">✓ <span>No Hidden Fees</span></div>
 
         <div class="pt-6 text-center">
-          <button class="bg-[#1e3a8a] text-white px-6 py-2 rounded-md text-xs hover:bg-[#162d66]">
+          <button class="bg-[#1e3a8a] text-white px-6 py-2 rounded-md text-xs hover:bg-[#162d66]" onclick="openOrderModal('Essential Verification – £24.99')">
             Place Order – £24.99
           </button>
         </div>
@@ -160,7 +160,7 @@
         <div class="flex items-start gap-2">✓ <span>Guaranteed No Hidden Charges</span></div>
 
         <div class="pt-6 text-center">
-          <button class="bg-[#1d813d] text-white px-6 py-2 rounded-md text-xs hover:bg-[#166430]">
+          <button class="bg-[#1d813d] text-white px-6 py-2 rounded-md text-xs hover:bg-[#166430]" onclick="openOrderModal('Priority Verification – £49.99')">
             Place Order – £49.99
           </button>
         </div>
@@ -197,7 +197,7 @@
         <div class="flex items-start gap-2">✓ <span>Transparent Pricing — No Hidden Fees</span></div>
 
         <div class="pt-6 text-center">
-          <button class="bg-[#b91c1c] text-white px-6 py-2 rounded-md text-xs hover:bg-[#991616]">
+          <button class="bg-[#b91c1c] text-white px-6 py-2 rounded-md text-xs hover:bg-[#991616]" onclick="openOrderModal('Fast Track Verification – £99.99')">
             Place Order – £99.99
           </button>
         </div>
@@ -205,8 +205,27 @@
     </div>
 
   </div>
-</section>
 
+  
+</section>
+<center>
+<!-- ORDER FORM MODAL -->
+<div id="orderModal" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50">
+
+  <div class="modal-box bg-white w-full max-w-3xl rounded-lg shadow-xl 
+              overflow-y-auto max-h-[90vh] p-8 relative transform transition-all duration-300 scale-95 opacity-0">
+
+    <!-- CLOSE BUTTON -->
+    <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+      &times;
+    </button>
+
+    <div id="orderModalContent"></div>
+
+  </div>
+
+</div>
+</center>
 
 <section class="w-full bg-[#f5f2f2] py-10 border-t">
   <div class="max-w-4xl mx-auto text-center px-6">
@@ -225,47 +244,6 @@
 
   </div>
 </section>
-
-<section class="w-full bg-white py-14">
-  <div class="max-w-5xl mx-auto text-center px-4">
-    <h2 class="text-lg md:text-xl font-semibold mb-6">
-      We require the following documents from all Directors and Persons with Significant Control (PSCs)
-    </h2>
-
-    <div class="border rounded-lg shadow-sm bg-white text-left px-6 py-5 space-y-3">
-
-      <!-- Item 1 -->
-      <div class="flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 bg-gray-50">
-        <p class="font-medium text-sm">1) Proof of Identity</p>
-        <a href="#" class="text-blue-600 text-xs font-medium hover:underline">Click here to see accepted documents</a>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 bg-gray-50">
-        <p class="font-medium text-sm">2) Proof of Residential Address</p>
-        <a href="#" class="text-blue-600 text-xs font-medium hover:underline">Click here to see accepted documents</a>
-      </div>
-
-
-     
-
-    </div>
-
-    <p class="text-sm text-gray-700 mt-8 leading-relaxed">
-      If we need to communicate with someone other than the Director, such as an authorised
-      representative, we may also request a signed letter confirming their authority to act
-      on the Director’s behalf. A simple template can be provided upon request.
-      <br><br>
-      In certain cases, we may require the same verification documents from the authorised
-      representative as well.
-      <br><br>
-      If you have any questions, feel free to contact us anytime.
-    </p>
-  </div>
-</section>
-
-
-
 
 
 <!-- MONEYBACK GUARANTEE SECTION -->
@@ -532,6 +510,43 @@
   </div>
 </section>
 
+<section class="w-full bg-white py-14">
+  <div class="max-w-5xl mx-auto text-center px-4">
+    <h2 class="text-lg md:text-xl font-semibold mb-6">
+      We require the following documents from all Directors and Persons with Significant Control (PSCs)
+    </h2>
+
+    <div class="border rounded-lg shadow-sm bg-white text-left px-6 py-5 space-y-3">
+
+      <!-- Item 1 -->
+      <div class="flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 bg-gray-50">
+        <p class="font-medium text-sm">1) Proof of Identity</p>
+        <a href="#" class="text-blue-600 text-xs font-medium hover:underline">Click here to see accepted documents</a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="flex items-center justify-between border border-gray-200 rounded-md px-4 py-3 bg-gray-50">
+        <p class="font-medium text-sm">2) Proof of Residential Address</p>
+        <a href="#" class="text-blue-600 text-xs font-medium hover:underline">Click here to see accepted documents</a>
+      </div>
+
+
+     
+
+    </div>
+
+    <p class="text-sm text-gray-700 mt-8 leading-relaxed">
+      If we need to communicate with someone other than the Director, such as an authorised
+      representative, we may also request a signed letter confirming their authority to act
+      on the Director’s behalf. A simple template can be provided upon request.
+      <br><br>
+      In certain cases, we may require the same verification documents from the authorised
+      representative as well.
+      <br><br>
+      If you have any questions, feel free to contact us anytime.
+    </p>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="w-full bg-[#1A1A1A] text-gray-300 pt-16 pb-10 px-6">
@@ -650,6 +665,95 @@
 
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+const fullFormHTML = `
+  <h2 class="text-2xl font-semibold text-center mb-6">
+    Companies House ID Verification Form
+  </h2>
+
+  <!-- YOUR FULL FORM STARTS HERE -->
+  <form class="space-y-4 text-sm text-gray-700">
+
+    <input type="text" placeholder="Full Name" class="w-full border px-4 py-2 rounded">
+
+    <input type="text" placeholder="Residential Address" class="w-full border px-4 py-2 rounded">
+
+    <input type="text" placeholder="Postcode" class="w-full border px-4 py-2 rounded">
+
+    <input type="text" placeholder="Country" class="w-full border px-4 py-2 rounded">
+
+    <input type="text" placeholder="Contact Number" class="w-full border px-4 py-2 rounded">
+
+    <input type="email" placeholder="Email 1" class="w-full border px-4 py-2 rounded">
+
+    <input type="email" placeholder="Email 2" class="w-full border px-4 py-2 rounded">
+
+    <input type="text" placeholder="Company Name" class="w-full border px-4 py-2 rounded">
+
+    <input type="text" placeholder="Promotion Code" class="w-full border px-4 py-2 rounded">
+
+    <select class="w-full border px-4 py-2 rounded">
+      <option>Select Payment Gateway</option>
+      <option>Stripe</option>
+      <option>PayPal</option>
+    </select>
+
+    <div class="pt-6">
+      <button class="w-full bg-black text-white py-3 rounded hover:bg-gray-900">
+        PLACE ORDER
+      </button>
+    </div>
+
+  </form>
+
+  <p class="text-xs text-gray-600 mt-4 leading-relaxed">
+    By clicking this checkbox, you agree to the terms and conditions...
+  </p>
+
+  <!-- YOUR FULL FORM ENDS HERE -->
+`;
+</script>
+
+<script>
+function openOrderModal(planTitle) {
+  const modal = document.getElementById("orderModal");
+  const box = modal.querySelector(".modal-box");
+
+  document.getElementById("orderModalContent").innerHTML = `
+    <h2 class="text-xl font-semibold mb-4">${planTitle}</h2>
+    ${fullFormHTML}
+  `;
+
+  modal.classList.remove("hidden");
+
+  // animate in
+  setTimeout(() => {
+    box.classList.remove("scale-95", "opacity-0");
+    box.classList.add("scale-100", "opacity-100");
+  }, 10);
+}
+
+
+function closeOrderModal() {
+  const modal = document.getElementById("orderModal");
+  const box = modal.querySelector(".modal-box");
+
+  // animate out
+  box.classList.remove("scale-100", "opacity-100");
+  box.classList.add("scale-95", "opacity-0");
+
+  setTimeout(() => {
+    modal.classList.add("hidden");
+  }, 200);
+}
+
+
+// close modal on clicking background
+document.getElementById("orderModal").addEventListener("click", function(e) {
+  if (e.target.id === "orderModal") closeOrderModal();
+});
+</script>
+
 <script>
   // Initialize AOS
   AOS.init({
