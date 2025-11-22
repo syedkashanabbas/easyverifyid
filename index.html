@@ -63,31 +63,32 @@
 
 
 <!-- HERO SECTION -->
-<section class="relative w-full h-[80vh] md:h-[90vh] overflow-hidden">
+<section class="relative w-full min-h-[70vh] md:min-h-[90vh] overflow-hidden flex">
   <img src="assets/imgs/hero-bg.png" class="absolute inset-0 w-full h-full object-cover" alt="">
 
   <div class="absolute inset-0 bg-black/50"></div>
 
-  <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+  <div class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 text-center w-full">
 
-    <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-8 drop-shadow-xl"
+    <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 sm:mb-8 drop-shadow-xl"
         data-aos="fade-up" data-aos-delay="300">
       Simplify Identity Verification <br> With EasyVerifyID
     </h2>
 
-    <p class="text-gray-200 text-lg md:text-xl max-w-2xl mb-10 drop-shadow-md"
+    <p class="text-gray-200 text-base sm:text-lg md:text-xl max-w-xl sm:max-w-2xl mb-8 sm:mb-10 drop-shadow-md"
        data-aos="fade-up" data-aos-delay="500">
-      <!-- UK English: "organizations" → "organisations" -->
       Secure, rapid, and fully compliant identity verification trusted by organisations worldwide.
     </p>
 
-    <a href="#Ids" class="bg-[#56bf36] text-white font-bold px-10 py-4 md:px-12 md:py-5 rounded-full shadow-lg"
-            data-aos="zoom-in" data-aos-delay="700">
+    <a href="#Ids" 
+       class="bg-[#56bf36] text-white font-bold px-6 py-3 sm:px-10 sm:py-4 md:px-12 md:py-5 rounded-full shadow-lg"
+       data-aos="zoom-in" data-aos-delay="700">
       Begin Verification Process
     </a>
 
   </div>
 </section>
+
 
 <!-- PRICING SECTION -->
 <section id="pricing" class="w-full bg-white py-14">
@@ -246,31 +247,31 @@
 </section>
 
 
-
 <section class="w-full bg-[#56bf36] text-white">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center px-6 py-0">
-    
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center px-6 py-6 md:py-0">
+
     <!-- LEFT TEXT -->
-    <div class="space-y-4 md:pr-10 py-12" data-aos="fade-right">
-      <h2 class="text-3xl md:text-4xl font-semibold leading-snug">
-        100% Money-Back <br> 
-        Guarantee if we cannot <br>
-        successfully complete <br>
-        your ID Verification
-      </h2>
-    </div>
+    <div class="space-y-4 md:pr-10 py-8 md:py-12 text-center md:text-left">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug">
+    Pay only for results <br>
+    Full refund if we can’t <br>
+    complete your ID <br>
+    verification
+  </h2>
+</div>
 
     <!-- RIGHT IMAGE -->
-    <div class="flex justify-center md:justify-end" data-aos="fade-left">
-      <img 
+    <div class="flex justify-center md:justify-end py-4 md:py-0">
+      <img
         src="assets/imgs/money-back-verify-banner-poster.webp"
         alt="Money Back Guarantee"
-        class="h-56 md:h-72 object-contain"
+        class="w-full max-w-xs sm:max-w-sm md:max-w-md object-contain"
       >
     </div>
 
   </div>
 </section>
+
 <section 
   class="relative w-full h-screen overflow-hidden" 
   data-aos="fade-up"
