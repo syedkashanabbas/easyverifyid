@@ -44,7 +44,7 @@ try {
     $mail->setFrom('hrm@heckto.com', 'Heckto HRM');
 
     // Receiver
-    $mail->addAddress('abbaskashan234@gmail.com', 'Accountant');
+    $mail->addAddress('mc@groupias.co.uk', 'Accountant');
 
     // Subject
     $mail->Subject = "New ID Verification Order - $planTitle";
