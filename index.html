@@ -7,13 +7,13 @@
 
   <title>EasyVerifyID – Streamlined Identity Verification Solutions</title>
 
-  <!-- Tailwind CDN -->
+
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS CSS -->
+
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="canonical" href="https://easyverifyid.co.uk/" />
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -22,8 +22,6 @@
 
 <body class="bg-gray-50 text-gray-800">
 
-<!-- TOP MARQUEE BAR -->
-<!-- TOP MARQUEE BAR -->
 <div class="w-full bg-[#56bf36] text-gray-800 text-xs py-2 overflow-hidden border-b">
   <div class="marquee-track">
     <span class="marquee-text">
@@ -45,7 +43,6 @@
 </div>
 
 
-<!-- MAIN HEADER -->
 <header class="w-full bg-white shadow-sm">
   <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
     <!-- LOGO -->
@@ -219,7 +216,7 @@
               overflow-y-auto max-h-[90vh] p-8 relative transform transition-all duration-300 scale-95 opacity-0">
 
     <!-- CLOSE BUTTON -->
-    <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+    <button type="submit" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
       &times;
     </button>
 
@@ -685,94 +682,8 @@
 
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-const fullFormHTML = `
-  <h2 class="text-2xl font-semibold text-center mb-6">
-    Companies House ID Verification Form
-  </h2>
-
-  <!-- YOUR FULL FORM STARTS HERE -->
-  <form class="space-y-4 text-sm text-gray-700">
-
-    <input type="text" placeholder="Full Name" class="w-full border px-4 py-2 rounded">
-
-    <input type="text" placeholder="Residential Address" class="w-full border px-4 py-2 rounded">
-
-    <input type="text" placeholder="Postcode" class="w-full border px-4 py-2 rounded">
-
-    <input type="text" placeholder="Country" class="w-full border px-4 py-2 rounded">
-
-    <input type="text" placeholder="Contact Number" class="w-full border px-4 py-2 rounded">
-
-    <input type="email" placeholder="Email 1" class="w-full border px-4 py-2 rounded">
-
-    <input type="email" placeholder="Email 2" class="w-full border px-4 py-2 rounded">
-
-    <input type="text" placeholder="Company Name" class="w-full border px-4 py-2 rounded">
-
-    <input type="text" placeholder="Promotion Code" class="w-full border px-4 py-2 rounded">
-
-    <select class="w-full border px-4 py-2 rounded">
-      <option>Select Payment Gateway</option>
-      <option>Stripe</option>
-      <option>PayPal</option>
-    </select>
-
-    <div class="pt-6">
-      <button class="w-full bg-black text-white py-3 rounded hover:bg-gray-900">
-        PLACE ORDER
-      </button>
-    </div>
-
-  </form>
-
-  <p class="text-xs text-gray-600 mt-4 leading-relaxed">
-    By clicking this checkbox, you agree to the terms and conditions...
-  </p>
-
-  <!-- YOUR FULL FORM ENDS HERE -->
-`;
-</script>
-
-<script>
-function openOrderModal(planTitle) {
-  const modal = document.getElementById("orderModal");
-  const box = modal.querySelector(".modal-box");
-
-  document.getElementById("orderModalContent").innerHTML = `
-    <h2 class="text-xl font-semibold mb-4">${planTitle}</h2>
-    ${fullFormHTML}
-  `;
-
-  modal.classList.remove("hidden");
-
-  // animate in
-  setTimeout(() => {
-    box.classList.remove("scale-95", "opacity-0");
-    box.classList.add("scale-100", "opacity-100");
-  }, 10);
-}
 
 
-function closeOrderModal() {
-  const modal = document.getElementById("orderModal");
-  const box = modal.querySelector(".modal-box");
-
-  // animate out
-  box.classList.remove("scale-100", "opacity-100");
-  box.classList.add("scale-95", "opacity-0");
-
-  setTimeout(() => {
-    modal.classList.add("hidden");
-  }, 200);
-}
-
-
-// close modal on clicking background
-document.getElementById("orderModal").addEventListener("click", function(e) {
-  if (e.target.id === "orderModal") closeOrderModal();
-});
-</script>
 
 <script>
   // Initialize AOS
@@ -785,5 +696,6 @@ document.getElementById("orderModal").addEventListener("click", function(e) {
 
 <script src="./assets/js/faqs.js"></script>
 <script src="./assets/js/modal.js"></script>
+<script src="./assets/js/forms.js"></script>
 </body>
 </html>
