@@ -11,17 +11,10 @@ const fullFormHTML = `
 
     <input name="postcode" type="text" placeholder="Postcode" class="w-full border px-4 py-2 rounded">
 
-    <input name="country" type="text" placeholder="Country" class="w-full border px-4 py-2 rounded">
 
     <input name="contactNumber" type="text" placeholder="Contact Number" class="w-full border px-4 py-2 rounded">
 
     <input name="email1" type="email" placeholder="Email 1" class="w-full border px-4 py-2 rounded">
-
-    <input name="email2" type="email" placeholder="Email 2" class="w-full border px-4 py-2 rounded">
-
-    <input name="companyName" type="text" placeholder="Company Name" class="w-full border px-4 py-2 rounded">
-
-    <input name="promoCode" type="text" placeholder="Promotion Code" class="w-full border px-4 py-2 rounded">
 
     <select name="paymentGateway" class="w-full border px-4 py-2 rounded">
       <option value="">Select Payment Gateway</option>

@@ -19,12 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $fullName         = $_POST['fullName'] ?? '';
 $address          = $_POST['address'] ?? '';
 $postcode         = $_POST['postcode'] ?? '';
-$country          = $_POST['country'] ?? '';
 $contactNumber    = $_POST['contactNumber'] ?? '';
 $email1           = $_POST['email1'] ?? '';
-$email2           = $_POST['email2'] ?? '';
-$companyName      = $_POST['companyName'] ?? '';
-$promoCode        = $_POST['promoCode'] ?? '';
 $paymentGateway   = $_POST['paymentGateway'] ?? '';
 $planTitle        = $_POST['planTitle'] ?? '';
 
@@ -44,7 +40,7 @@ try {
     $mail->setFrom('hrm@heckto.com', 'Heckto HRM');
 
     // Receiver
-    $mail->addAddress('mc@groupias.co.uk', 'Accountant');
+    $mail->addAddress('abbaskashan234@gmail.com', 'Accountant');
 
     // Subject
     $mail->Subject = "New ID Verification Order - $planTitle";
@@ -57,12 +53,8 @@ try {
       <p><strong>Full Name:</strong> $fullName</p>
       <p><strong>Address:</strong> $address</p>
       <p><strong>Postcode:</strong> $postcode</p>
-      <p><strong>Country:</strong> $country</p>
       <p><strong>Contact Number:</strong> $contactNumber</p>
-      <p><strong>Email 1:</strong> $email1</p>
-      <p><strong>Email 2:</strong> $email2</p>
-      <p><strong>Company Name:</strong> $companyName</p>
-      <p><strong>Promotion Code:</strong> $promoCode</p>
+      <p><strong>Email :</strong> $email1</p>
       <p><strong>Payment Gateway:</strong> $paymentGateway</p>
     ";
 
