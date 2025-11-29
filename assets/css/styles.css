@@ -1,25 +1,32 @@
  .marquee-track {
-    display: inline-flex;
-    white-space: nowrap;
-    animation: scroll-left 18s linear infinite;
-  }
+   display: inline-flex;
+   white-space: nowrap;
+   animation: scroll-left 18s linear infinite;
+ }
 
-  .marquee-text {
-    padding-right: 2rem; /* slight breath between duplicates */
-  }
+ .marquee-text {
+   padding-right: 2rem;
+   /* slight breath between duplicates */
+ }
 
-  @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-      body {
-      font-family: 'Poppins', sans-serif;
-    }
-    
-    .faq-arrow {
-      transition: transform 0.3s ease;
-    }
-    
-    .faq-item.active .faq-arrow {
-      transform: rotate(90deg);
-    }
+ @keyframes scroll-left {
+   0% {
+     transform: translateX(0);
+   }
+
+   100% {
+     transform: translateX(-50%);
+   }
+ }
+
+ body {
+   font-family: 'Poppins', sans-serif;
+ }
+
+ .faq-arrow {
+   transition: transform 0.3s ease;
+ }
+
+ .faq-item.active .faq-arrow {
+   transform: rotate(90deg);
+ }
