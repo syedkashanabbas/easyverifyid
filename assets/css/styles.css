@@ -1,13 +1,14 @@
- .marquee-track {
-   display: inline-flex;
-   white-space: nowrap;
-   animation: scroll-left 18s linear infinite;
- }
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: scroll-left 32s linear infinite;
+}
 
- .marquee-text {
-   padding-right: 2rem;
-   /* slight breath between duplicates */
- }
+.marquee-text {
+  padding-right: 2rem;
+  font-weight: 700; 
+  font-size: 1rem; 
+}
 
  @keyframes scroll-left {
    0% {

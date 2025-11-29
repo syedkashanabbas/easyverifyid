@@ -20,7 +20,7 @@ $fullName         = $_POST['fullName'] ?? '';
 $address          = $_POST['address'] ?? '';
 $postcode         = $_POST['postcode'] ?? '';
 $contactNumber    = $_POST['contactNumber'] ?? '';
-$email1           = $_POST['email1'] ?? '';
+$email           = $_POST['email'] ?? '';
 $paymentGateway   = $_POST['paymentGateway'] ?? '';
 $planTitle        = $_POST['planTitle'] ?? '';
 
@@ -54,7 +54,7 @@ try {
       <p><strong>Address:</strong> $address</p>
       <p><strong>Postcode:</strong> $postcode</p>
       <p><strong>Contact Number:</strong> $contactNumber</p>
-      <p><strong>Email :</strong> $email1</p>
+      <p><strong>Email :</strong> $email</p>
       <p><strong>Payment Gateway:</strong> $paymentGateway</p>
     ";
 

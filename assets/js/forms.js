@@ -14,7 +14,7 @@ const fullFormHTML = `
 
     <input name="contactNumber" type="text" placeholder="Contact Number" class="w-full border px-4 py-2 rounded">
 
-    <input name="email1" type="email" placeholder="Email 1" class="w-full border px-4 py-2 rounded">
+    <input name="email" type="email" placeholder="Email" class="w-full border px-4 py-2 rounded">
 
     <select name="paymentGateway" class="w-full border px-4 py-2 rounded">
       <option value="">Select Payment Gateway</option>

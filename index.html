@@ -46,33 +46,54 @@
 
   <div class="w-full bg-[#56bf36] text-gray-800 text-xs py-2 overflow-hidden border-b">
     <div class="marquee-track">
-      <span class="marquee-text">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
-      <span class="marquee-text">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
-      <span class="marquee-text">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
-      <span class="marquee-text">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
-      <span class="marquee-text">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
-      <span class="marquee-text">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
+      <span class="marquee-text font-bold text-base">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
+      <span class="marquee-text font-bold text-base">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
+      <span class="marquee-text font-bold text-base">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
+      <span class="marquee-text font-bold text-base">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
+      <span class="marquee-text font-bold text-base">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
+      <span class="marquee-text font-bold text-base">Fast, secure identity verification. Black Friday: 10% off with code BLACK10.</span>
     </div>
   </div>
 
-
-  <header class="w-full bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-      <!-- LOGO -->
-      <div class="flex items-center gap-3">
-        <img src="assets/imgs/logo.webp" class="h-12" alt="EasyVerifyID">
-      </div>
-
-      <!-- NAVIGATION -->
-      <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-700">
-        <a href="#" class="hover:text-blue-600">Home</a>
-        <a href="#Ids" class="hover:text-blue-600">IDS</a>
-        <a href="#pricing" class="hover:text-blue-600">Pricing</a>
-        <a href="#faqs" class="hover:text-blue-600">FAQS</a>
-      </nav>
-
+<header class="w-full bg-white shadow-sm   z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    
+    <!-- LOGO -->
+    <div class="flex items-center gap-3">
+      <img src="assets/imgs/logo.webp" class="h-12" alt="EasyVerifyID">
     </div>
-  </header>
+
+    <!-- NAVIGATION (Desktop) -->
+    <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-700">
+      <a href="#" class="hover:text-blue-600">Home</a>
+      <a href="#Ids" class="hover:text-blue-600">IDS</a>
+      <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+      <a href="#faqs" class="hover:text-blue-600">FAQS</a>
+    </nav>
+
+    <!-- MOBILE BUTTON -->
+    <button id="menuBtn" class="md:hidden text-gray-800 text-3xl">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+    </button>
+  </div>
+
+  <!-- MOBILE SLIDE MENU -->
+  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="flex flex-col p-6 space-y-6 text-lg font-medium text-gray-800">
+      <button id="closeMenu" class="text-right text-3xl font-light mb-4">×</button>
+
+      <a href="#" class="hover:text-blue-600">Home</a>
+      <a href="#Ids" class="hover:text-blue-600">IDS</a>
+      <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+      <a href="#faqs" class="hover:text-blue-600">FAQS</a>
+    </div>
+  </div>
+</header>
+
 
 
   <!-- HERO SECTION -->
@@ -83,7 +104,9 @@
 
     <div class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 text-center w-full">
 
-      <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 sm:mb-8 drop-shadow-xl" data-aos="fade-up" data-aos-delay="300">Simplify Identity Verification <br> With EasyVerifyID</h1>
+    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-normal md:leading-[1.2] mb-6 sm:mb-8 drop-shadow-xl" data-aos="fade-up" data-aos-delay="300">
+  Simplify Identity Verification <br> With EasyVerifyID
+</h1>
 
       <p class="text-gray-200 text-base sm:text-lg md:text-xl max-w-xl sm:max-w-2xl mb-8 sm:mb-10 drop-shadow-md" data-aos="fade-up" data-aos-delay="500">Secure, rapid, and fully compliant identity verification trusted by organisations worldwide.</p>
 
@@ -99,130 +122,128 @@
 
   <!-- PRICING SECTION -->
   <section id="pricing" class="w-full bg-white py-14">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-4">
 
-      <!-- CARD 1 – Essential Verification -->
-      <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200" data-aos="fade-up"
-        data-aos-delay="100">
-        <div class="text-center px-6 py-10 bg-[#e8f0ff] border-b">
-          <h2 class="text-xl font-bold text-[#1e3a8a]">
-            Essential Verification
-          </h2>
+    <!-- CARD 1 – Essential (LIGHT GREEN) -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+      <div class="text-center px-6 py-10 text-white bg-[#c6efb9] border-b">
+        <h2 class="text-xl font-bold ">
+          Essential Verification
+        </h2>
 
-          <p class="mt-2 text-sm text-gray-700">£24.99 (inc VAT)</p>
+        <p class="mt-2 text-sm ">£24.99 (inc VAT)</p>
 
-          <p class="mt-2 text-xs font-medium text-gray-600">
-            Processing Time: 5 Days
-          </p>
-        </div>
-
-        <div class="px-6 py-8 space-y-4 text-sm text-gray-700">
-          <div class="flex items-start gap-2">✓ <span>Verification for UK & Non-UK Officers</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Standard Processing</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Companies House Personal Code</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Fully Digital Submission</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>No Hidden Fees</span></div>
-
-          <div class="pt-6 text-center">
-            <button class="bg-[#1e3a8a] text-white w-full px-6 py-4 rounded-md text-xs hover:bg-[#162d66]"
-              onclick="openOrderModal('Essential Verification – £24.99')">
-              Place Order – £24.99
-            </button>
-          </div>
-        </div>
+        <p class="mt-2 text-xs font-medium ">
+          Processing Time: 5 Days
+        </p>
       </div>
 
-      <!-- CARD 2 – Priority Verification -->
-      <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200" data-aos="fade-up"
-        data-aos-delay="200">
-        <div class="text-center px-6 py-10 bg-[#e3f9e5] border-b">
-          <h2 class="text-xl font-bold text-[#1d813d]">
-            Priority Verification
-          </h2>
+      <div class="px-6 py-8 space-y-4 text-sm text-gray-700">
+        <div class="flex items-start gap-2">✓ <span>Verification for UK & Non-UK Officers</span></div>
+        <div class="border-b"></div>
 
-          <p class="mt-2 text-sm text-gray-700">£49.99 (inc VAT)</p>
+        <div class="flex items-start gap-2">✓ <span>Standard Processing</span></div>
+        <div class="border-b"></div>
 
-          <p class="mt-2 text-xs font-medium text-gray-600">
-            Processing Time: 24–48 Hours
-          </p>
-        </div>
+        <div class="flex items-start gap-2">✓ <span>Companies House Personal Code</span></div>
+        <div class="border-b"></div>
 
-        <div class="px-6 py-8 space-y-4 text-sm text-gray-700">
-          <div class="flex items-start gap-2">✓ <span>Verification for UK & Non-UK Officers</span></div>
-          <div class="border-b"></div>
+        <div class="flex items-start gap-2">✓ <span>Fully Digital Submission</span></div>
+        <div class="border-b"></div>
 
-          <div class="flex items-start gap-2">✓ <span>Priority Review (Queue Skip)</span></div>
-          <div class="border-b"></div>
+        <div class="flex items-start gap-2">✓ <span>No Hidden Fees</span></div>
 
-          <div class="flex items-start gap-2">✓ <span>Document Pre-Check (We review your documents before
-              submission)</span></div>
-          <div class="border-b"></div>
+        <div class="pt-6 text-center">
+        <button class="bg-[#c6efb9] text-white w-full px-6 py-4 rounded-md text-xs hover:bg-[#c6ef52]"
+            onclick="openOrderModal('Essential Verification – £24.99')">
+            Place Order – £24.99
+          </button>
 
-          <div class="flex items-start gap-2">✓ <span>Companies House Personal Code</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Guaranteed No Hidden Charges</span></div>
-
-          <div class="pt-6 text-center">
-            <button class="bg-[#1d813d] text-white w-full px-6 py-4 rounded-md text-xs hover:bg-[#166430]"
-              onclick="openOrderModal('Priority Verification – £49.99')">
-              Place Order – £49.99
-            </button>
-          </div>
         </div>
       </div>
-
-      <!-- CARD 3 – Fast Track Verification -->
-      <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200" data-aos="fade-up"
-        data-aos-delay="300">
-        <div class="text-center px-6 py-10 bg-[#ffe5e5] border-b">
-          <h2 class="text-xl font-bold text-[#b91c1c]">
-            Fast Track Verification
-          </h2>
-
-          <p class="mt-2 text-sm text-gray-700">£99.99 (inc VAT)</p>
-
-          <p class="mt-2 text-xs font-medium text-gray-600">
-            Processing Time: Within 12 Hours
-          </p>
-        </div>
-
-        <div class="px-6 py-8 space-y-4 text-sm text-gray-700">
-          <div class="flex items-start gap-2">✓ <span>Verification for UK & Non-UK Officers</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Fast Track Processing (Same Day)</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Companies House Personal Code</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Fully Digital Process</span></div>
-          <div class="border-b"></div>
-
-          <div class="flex items-start gap-2">✓ <span>Transparent Pricing — No Hidden Fees</span></div>
-
-          <div class="pt-6 text-center">
-            <button class="bg-[#b91c1c] text-white w-full px-6 py-4 rounded-md text-xs hover:bg-[#991616]"
-              onclick="openOrderModal('Fast Track Verification – £99.99')">
-              Place Order – £99.99
-            </button>
-          </div>
-        </div>
-      </div>
-
     </div>
 
+    <!-- CARD 2 – Priority (MEDIUM GREEN) -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+      <div class="text-center px-6 py-10 text-white bg-[#7dd868] border-b">
+        <h2 class="text-xl font-bold ">
+          Priority Verification
+        </h2>
 
-  </section>
+        <p class="mt-2 text-sm ">£49.99 (inc VAT)</p>
+
+        <p class="mt-2 text-xs font-medium ">
+          Processing Time: 24–48 Hours
+        </p>
+      </div>
+
+      <div class="px-6 py-8 space-y-4 text-sm text-gray-700">
+        <div class="flex items-start gap-2">✓ <span>Verification for UK & Non-UK Officers</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Priority Review (Queue Skip)</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Document Pre-Check (Reviewed Before Submission)</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Companies House Personal Code</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Guaranteed No Hidden Charges</span></div>
+
+        <div class="pt-6 text-center">
+         <button class="bg-[#7dd868] text-white w-full px-6 py-4 rounded-md text-xs hover:bg-[#56bf36]"
+          onclick="openOrderModal('Priority Verification – £49.99')">
+          Place Order – £49.99
+        </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 – Fast Track (DARKEST GREEN) -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200" data-aos="fade-up" data-aos-delay="300">
+      <div class="text-center px-6 py-10 bg-[#56bf36] border-b">
+        <h2 class="text-xl font-bold text-white">
+          Fast Track Verification
+        </h2>
+
+        <p class="mt-2 text-sm text-white">£99.99 (inc VAT)</p>
+
+        <p class="mt-2 text-xs font-medium text-white">
+          Processing Time: Within 12 Hours
+        </p>
+      </div>
+
+      <div class="px-6 py-8 space-y-4 text-sm text-gray-700">
+        <div class="flex items-start gap-2">✓ <span>Verification for UK & Non-UK Officers</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Fast Track Processing (Same Day)</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Companies House Personal Code</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Fully Digital Process</span></div>
+        <div class="border-b"></div>
+
+        <div class="flex items-start gap-2">✓ <span>Transparent Pricing — No Hidden Fees</span></div>
+
+        <div class="pt-6 text-center">
+         <button class="bg-[#3e8c27] text-white w-full px-6 py-4 rounded-md text-xs hover:bg-[#2f6a1e]"
+  onclick="openOrderModal('Fast Track Verification – £99.99')">
+  Place Order – £99.99
+</button>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <section class="w-full bg-white py-14">
     <div class="max-w-5xl mx-auto text-center px-4">
@@ -287,25 +308,23 @@
       </p>
     </div>
   </section>
+<!-- ORDER FORM MODAL -->
+<div id="orderModal" class="fixed inset-0 bg-black/50 hidden z-50 flex justify-center items-center">
 
-  <center>
-    <!-- ORDER FORM MODAL -->
-    <div id="orderModal" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50">
+  <div class="modal-box bg-white w-full max-w-3xl rounded-lg shadow-xl 
+        overflow-y-auto max-h-[90vh] p-8 relative transform transition-all duration-300 scale-95 opacity-0">
 
-      <div class="modal-box bg-white w-full max-w-3xl rounded-lg shadow-xl 
-              overflow-y-auto max-h-[90vh] p-8 relative transform transition-all duration-300 scale-95 opacity-0">
+    <!-- CLOSE BUTTON -->
+    <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
+      &times;
+    </button>
 
-        <!-- CLOSE BUTTON -->
-        <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">
-          &times;
-        </button>
+    <div id="orderModalContent"></div>
 
-        <div id="orderModalContent"></div>
+  </div>
 
-      </div>
+</div>
 
-    </div>
-  </center>
 
   <section class="w-full bg-[#f5f2f2] py-10 border-t">
     <div class="max-w-4xl mx-auto text-center px-6">
@@ -717,6 +736,18 @@
       once: true,
       offset: 100
     });
+    const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('translate-x-full');
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileMenu.classList.add('translate-x-full');
+});
+
   </script>
 
   <script src="./assets/js/faqs.js"></script>
