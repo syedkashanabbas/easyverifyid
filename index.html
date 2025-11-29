@@ -98,27 +98,39 @@
 
 
   <!-- HERO SECTION -->
-  <section class="relative w-full min-h-[70vh] md:min-h-[90vh] overflow-hidden flex">
-    <img src="assets/imgs/hero-bg.webp" class="absolute inset-0 w-full h-full object-cover" alt="">
+<section id="heroSection" class="relative w-full min-h-[70vh] md:min-h-[90vh] overflow-hidden flex items-center justify-center">
 
-    <div class="absolute inset-0 bg-black/50"></div>
+  <!-- Rotating Background Image -->
+  <div id="heroBg" class="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-[1500ms] opacity-100"></div>
 
-    <div class="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 text-center w-full">
 
-    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-normal md:leading-[1.8] mb-6 sm:mb-8 drop-shadow-xl" data-aos="fade-up" data-aos-delay="300">
-  Simplify Identity Verification <br> With EasyVerifyID
-</h1>
 
-      <p class="text-gray-200 text-base sm:text-lg md:text-xl max-w-xl sm:max-w-2xl mb-8 sm:mb-10 drop-shadow-md" data-aos="fade-up" data-aos-delay="500">Secure, rapid, and fully compliant identity verification trusted by organisations worldwide.</p>
+  <!-- Content -->
+  <div class="relative z-10 glass-box text-center px-6 py-10 rounded-3xl max-w-8xl"
+       data-aos="fade-up"
+       data-aos-duration="1300">
 
-      <a href="#Ids"
-        class="bg-[#56bf36] text-white font-bold px-6 py-3 sm:px-10 sm:py-4 md:px-12 md:py-5 rounded-full shadow-lg"
-        data-aos="zoom-in" data-aos-delay="700">
-        Begin Verification Process
-      </a>
+    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-normal md:leading-[1.8] mb-6 drop-shadow-xl">
+      Simplify Identity Verification <br> With EasyVerifyID
+    </h1>
 
-    </div>
-  </section>
+    <p class="text-gray-200 text-base sm:text-lg md:text-xl max-w-xl mx-auto mb-10 drop-shadow-md"
+       data-aos="fade-up"
+       data-aos-delay="300">
+      Secure, rapid, and fully compliant identity verification trusted by organisations worldwide.
+    </p>
+
+    <a href="#Ids"
+      class="bg-[#56bf36] text-white font-bold px-8 py-4 md:px-12 md:py-5 rounded-full shadow-lg hover:scale-105 transition"
+      data-aos="zoom-in"
+      data-aos-delay="500">
+      Begin Verification Process
+    </a>
+
+  </div>
+
+</section>
+
   <!-- PRICING SECTION -->
 <section id="pricing" class="w-full py-20 bg-gradient-to-b from-white to-[#f3f9f4] relative overflow-hidden">
 
@@ -259,7 +271,7 @@
 </section>
 
 
-<section class="w-full bg-gradient-to-b from-white to-[#f3f9f4] py-20 relative overflow-hidden">
+<section id="doc" class="w-full bg-gradient-to-b from-white to-[#f3f9f4] py-20 relative overflow-hidden">
 
   <!-- Floating lights -->
   <div class="absolute inset-0 pointer-events-none">
@@ -630,7 +642,7 @@
         As an Authorised Corporate Service Provider (ACSP), EasyVerifyID is officially approved to conduct 
         verification checks and issue the Companies House Personal Verification Code required for appointments, 
         updates and future filings.
-        <a href="#" onclick="openDocumentsModal(groupABHTML); return false;" class="text-blue-600 underline">
+        <a href="#doc" class=" text-blue-600 underline" data-tab="groupAB">
           View the complete list of required documents.
         </a>
       </p>
@@ -794,6 +806,7 @@
   </script>
 
   <script src="./assets/js/faqs.js"></script>
+  <script src="./assets/js/hero-bg.js"></script>
   <script src="./assets/js/modal.js"></script>
   <script src="./assets/js/forms.js"></script>
 </body>

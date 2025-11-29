@@ -40,6 +40,12 @@
     transition: 200ms ease;
     border: 1px solid rgba(255,255,255,0.4);
   }
+.glass-box {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 40px -12px rgba(0,0,0,0.4);
+}
 
   .tab-btn:hover {
     background: rgba(255,255,255,0.8);
