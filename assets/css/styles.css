@@ -21,7 +21,7 @@
  }
 
  body {
-   font-family: 'Poppins', sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
  }
 
  .faq-arrow {
@@ -31,3 +31,22 @@
  .faq-item.active .faq-arrow {
    transform: rotate(90deg);
  }
+   .tab-btn {
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    transition: 200ms ease;
+    border: 1px solid rgba(255,255,255,0.4);
+  }
+
+  .tab-btn:hover {
+    background: rgba(255,255,255,0.8);
+  }
+
+  .active-tab {
+    background: #56bf36 !important;
+    color: white;
+    box-shadow: 0 8px 20px -4px rgba(86,191,54,0.4);
+  }

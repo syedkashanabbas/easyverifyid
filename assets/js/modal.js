@@ -73,36 +73,34 @@ const groupABHTML = `
   </ul>
 `;
 
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabContent = document.getElementById("tabContent");
 
-function openDocumentsModal(contentHTML) {
-  const modal = document.getElementById("documentsModal");
-  const box = modal.querySelector(".doc-modal-box");
+  const tabs = {
+    groupA: groupAHTML,
+    groupB: groupBHTML,
+    groupAB: groupABHTML
+  };
 
-  document.getElementById("documentsModalContent").innerHTML = contentHTML;
+  // Default tab
+  tabContent.innerHTML = tabs.groupA;
+  setTimeout(() => tabContent.style.opacity = "1", 80);
 
-  modal.classList.remove("hidden");
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
 
-  // animate in
-  setTimeout(() => {
-    box.classList.remove("scale-95", "opacity-0");
-    box.classList.add("scale-100", "opacity-100");
-  }, 10);
-}
+      tabButtons.forEach(b => b.classList.remove("active-tab"));
+      btn.classList.add("active-tab");
 
-function closeDocumentsModal() {
-  const modal = document.getElementById("documentsModal");
-  const box = modal.querySelector(".doc-modal-box");
+      const tabKey = btn.getAttribute("data-tab");
 
-  // animate out
-  box.classList.remove("scale-100", "opacity-100");
-  box.classList.add("scale-95", "opacity-0");
-
-  setTimeout(() => {
-    modal.classList.add("hidden");
-  }, 200);
-}
-
-// click outside to close
-document.getElementById("documentsModal").addEventListener("click", function(e) {
-  if (e.target.id === "documentsModal") closeDocumentsModal();
+      // fade-out then fade-in
+      tabContent.style.opacity = "0";
+      setTimeout(() => {
+        tabContent.innerHTML = tabs[tabKey];
+        tabContent.style.opacity = "1";
+      }, 180);
+    });
+  });
 });
